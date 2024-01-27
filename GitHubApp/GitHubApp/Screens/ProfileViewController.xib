@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="ghclientapplication" customModuleProvider="target">
+            <connections>
+                <outlet property="followUnfollowButton" destination="bC9-ij-LjO" id="pX8-Wz-Pba"/>
+                <outlet property="followersButton" destination="RqL-ZT-Ffi" id="XgO-XV-UYe"/>
+                <outlet property="followingButton" destination="PBf-rV-EYb" id="c7m-HU-FZS"/>
+                <outlet property="logoutButtonLabel" destination="5oX-DP-BZ6" id="ezP-2e-WN2"/>
+                <outlet property="profileLogoView" destination="T49-iN-Xno" id="ubH-yV-GiJ"/>
+                <outlet property="profileNameLabel" destination="mOa-Eu-vko" id="UPT-Ak-xNo"/>
+                <outlet property="profileUsernameLabel" destination="PxC-Rc-bIA" id="V71-Bx-g7H"/>
+                <outlet property="repositoriesButtonLabel" destination="SL5-Me-brz" id="DNJ-Ch-d7b"/>
+                <outlet property="settingsButton" destination="pTv-0C-FA9" id="klc-ZV-KAu"/>
+                <outlet property="starredRepositoriesLabel" destination="HXJ-VU-po9" id="mf0-6b-ZDh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T49-iN-Xno">
+                    <rect key="frame" x="16" y="107" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxC-Rc-bIA">
+                    <rect key="frame" x="124" y="151" width="253" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqL-ZT-Ffi">
+                    <rect key="frame" x="16" y="245" width="176" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Followers" imagePadding="0.0">
+                        <imageReference key="image" image="person.2.fill" catalog="system" symbolScale="medium"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="followersButtonTapped:" destination="-1" eventType="touchUpInside" id="jgi-VM-3Uw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Me-brz">
+                    <rect key="frame" x="0.0" y="444" width="393" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Button">
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="repositoriesButtonTapped:" destination="-1" eventType="touchUpInside" id="DcN-p2-5MD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXJ-VU-po9">
+                    <rect key="frame" x="0.0" y="491" width="393" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Button2">
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="starredButtonTapped:" destination="-1" eventType="touchUpInside" id="oVF-x2-gj7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-Eu-vko">
+                    <rect key="frame" x="124" y="118" width="253" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-0C-FA9">
+                    <rect key="frame" x="254" y="59" width="120" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system" imagePlacement="trailing" title="Settings "/>
+                    <connections>
+                        <action selector="settingsButtonTapped:" destination="-1" eventType="touchUpInside" id="KBy-J7-kmn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oX-DP-BZ6">
+                    <rect key="frame" x="16" y="607" width="361" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="door.left.hand.open" catalog="system" title=" Logout"/>
+                    <connections>
+                        <action selector="logoutButtonTapped:" destination="-1" eventType="touchUpInside" id="cRF-jx-hB5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-ij-LjO">
+                    <rect key="frame" x="16" y="343" width="361" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                        <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="followUnfollowButtonTapped:" destination="-1" eventType="touchUpInside" id="cKC-kC-o7T"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBf-rV-EYb">
+                    <rect key="frame" x="200" y="245" width="177" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Following">
+                        <imageReference key="image" image="person.2.fill" catalog="system" symbolScale="medium"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="followingButtonTapped:" destination="-1" eventType="touchUpInside" id="sTv-0h-T3z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <point key="canvasLocation" x="87.786259541984734" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
